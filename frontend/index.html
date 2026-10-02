@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Bajhang — Hidden Gem of Nepal's Far West</title>
+  <meta name="description" content="Discover the breathtaking beauty of Bajhang district in Nepal — from the towering Mt. Saipal to the sacred Surma Sarovar lake, ancient temples, and vibrant Deuda culture." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #d4a843; --gold-light: #f0c860;
+      --deep: #0d1117; --dark: #161b22; --card: #1c2330;
+      --border: rgba(212,168,67,0.25);
+      --text: #e8eaf0; --muted: #8b949e;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--deep); color: var(--text); overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(13,17,23,0.88); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--gold); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.25s; }
+    .nav-links a:hover { color: var(--gold); }
+
+    .hero { position: relative; height: 100vh; min-height: 600px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/36/Surma_Kunda%2C_Bajhang_01.jpg'); background-size: cover; background-position: center; filter: brightness(0.45); animation: kenBurns 18s ease-in-out infinite alternate; }
+    @keyframes kenBurns { from { transform: scale(1.04); } to { transform: scale(1.12) translateX(-2%); } }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(13,17,23,0.3) 0%, rgba(13,17,23,0.05) 50%, rgba(13,17,23,0.85) 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 0 1.5rem; }
+    .hero-badge { display: inline-block; border: 1px solid var(--gold); color: var(--gold); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.35rem 1.2rem; border-radius: 999px; margin-bottom: 1.5rem; animation: fadeUp 1s ease both; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 700; line-height: 1.05; color: #fff; animation: fadeUp 1s 0.2s ease both; }
+    .hero h1 span { color: var(--gold); }
+    .hero-sub { margin: 1.2rem auto 0; font-size: clamp(1rem, 2vw, 1.2rem); color: rgba(255,255,255,0.75); max-width: 620px; line-height: 1.6; animation: fadeUp 1s 0.4s ease both; }
+    .hero-btns { margin-top: 2.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeUp 1s 0.6s ease both; }
+    .btn { padding: 0.8rem 2rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.3s; display: inline-block; }
+    .btn-gold { background: var(--gold); color: #0d1117; border: none; }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,168,67,0.4); }
+    .btn-outline { background: transparent; border: 1px solid rgba(255,255,255,0.4); color: #fff; }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+    .hero-stats { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; gap: 3rem; z-index: 2; animation: fadeUp 1s 0.8s ease both; }
+    .stat { text-align: center; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold); font-weight: 700; }
+    .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.2rem; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+    .section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.75rem; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: #fff; line-height: 1.2; }
+    .section-desc { color: var(--muted); font-size: 1rem; max-width: 600px; margin-top: 1rem; line-height: 1.7; }
+    .section-header { margin-bottom: 3.5rem; }
+    section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+
+    .about-strip { background: var(--dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 5rem 2rem; }
+    .about-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .about-image { border-radius: 16px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.5); position: relative; }
+    .about-image img { width: 100%; height: 420px; object-fit: cover; display: block; transition: transform 0.5s; }
+    .about-image:hover img { transform: scale(1.04); }
+    .about-badge { position: absolute; bottom: 1rem; left: 1rem; background: rgba(13,17,23,0.85); backdrop-filter: blur(10px); border: 1px solid var(--border); padding: 0.4rem 0.9rem; border-radius: 8px; font-size: 0.75rem; color: var(--gold); }
+    .about-text p { color: var(--muted); line-height: 1.8; margin-top: 1.2rem; }
+    .fact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+    .fact-box { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; }
+    .fact-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.3rem; }
+    .fact-val { font-size: 0.92rem; color: var(--text); font-weight: 500; }
+
+    .attract-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+    .card:hover .card-img { transform: scale(1.06); }
+    .card-img-wrap { height: 240px; overflow: hidden; }
+    .card-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; display: block; }
+    .card-body { padding: 1.4rem; }
+    .card-tag { display: inline-block; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--border); padding: 0.2rem 0.7rem; border-radius: 99px; margin-bottom: 0.8rem; }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #fff; margin-bottom: 0.5rem; }
+    .card-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.65; }
+    .card-meta { display: flex; gap: 1rem; margin-top: 1rem; font-size: 0.75rem; color: var(--muted); }
+
+    .gallery-wrap { background: var(--dark); }
+    .gallery-inner { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 260px 260px; gap: 1rem; }
+    .g-item { overflow: hidden; border-radius: 12px; border: 1px solid var(--border); position: relative; cursor: pointer; }
+    .g-item.tall { grid-column: span 2; grid-row: span 2; }
+    .g-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+    .g-item:hover img { transform: scale(1.07); }
+    .g-cap { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 1.5rem 1rem 0.8rem; opacity: 0; transition: opacity 0.3s; }
+    .g-item:hover .g-cap { opacity: 1; }
+    .g-cap p { font-size: 0.8rem; color: rgba(255,255,255,0.85); }
+
+    .video-wrap { background: var(--dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .video-inner { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem; }
+    .video-feature { display: grid; grid-template-columns: 1.4fr 0.8fr; gap: 2rem; align-items: center; }
+    .video-frame { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--border); border-radius: 14px; background: #000; box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
+    .video-frame iframe { width: 100%; height: 100%; display: block; border: 0; }
+    .video-copy h3 { margin: 0.7rem 0; }
+    .video-copy p { color: var(--muted); font-size: 0.9rem; line-height: 1.75; margin: 0.8rem 0; }
+    .video-source { display: inline-block; color: var(--gold); font-size: 0.78rem; margin-top: 0.4rem; }
+
+    .map-wrap { background: var(--deep); }
+    .map-inner { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem; }
+    .map-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: start; }
+    .map-frame { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
+    .map-frame iframe { width: 100%; height: 420px; display: block; }
+    .loc-list { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1.5rem; }
+    .loc-item { display: flex; gap: 0.8rem; padding: 0.9rem; border-radius: 10px; background: var(--card); border: 1px solid var(--border); transition: border-color 0.3s; }
+    .loc-item:hover { border-color: var(--gold); }
+    .loc-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .loc-name { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+    .loc-coords { font-size: 0.72rem; color: var(--muted); margin-top: 0.2rem; }
+
+    .culture-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.2rem; }
+    .cult-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.8rem 1.5rem; transition: transform 0.3s, border-color 0.3s; }
+    .cult-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+    .cult-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .cult-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem; }
+    .cult-desc { font-size: 0.86rem; color: var(--muted); line-height: 1.7; }
+    .language-share { display: block; color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1.6rem; margin: 0.3rem 0 0.7rem; }
+    .language-source { color: var(--gold); font-size: 0.78rem; line-height: 1.6; }
+    .language-feature { display: grid; grid-template-columns: minmax(240px, 0.85fr) minmax(0, 1.15fr); gap: 2rem; align-items: center; margin: 2rem 0; padding: 1.4rem; background: var(--dark); border: 1px solid var(--border); border-radius: 16px; }
+    .language-visual { min-height: 260px; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; border-radius: 12px; background: linear-gradient(0deg, rgba(13,17,23,0.94), rgba(13,17,23,0.05)), url('https://upload.wikimedia.org/wikipedia/commons/7/76/Deuda_Khel.jpg') center 40% / cover; }
+    .language-visual-label { color: rgba(255,255,255,0.8); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; }
+    .language-wordmark { color: #fff; font-size: 3rem; font-weight: 700; line-height: 1.1; margin: 0.4rem 0; text-shadow: 0 2px 12px rgba(0,0,0,0.55); }
+    .language-visual p { color: rgba(255,255,255,0.82); font-size: 0.84rem; line-height: 1.55; }
+    .language-bars { display: grid; gap: 1.2rem; padding: 0.6rem; }
+    .language-row-head { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 0.45rem; color: var(--text); font-size: 0.9rem; }
+    .language-row-head strong { color: var(--gold); white-space: nowrap; }
+    .language-track { height: 9px; overflow: hidden; border-radius: 99px; background: rgba(255,255,255,0.1); }
+    .language-fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--gold), #f0c860); }
+    .deuda-feature { max-width: 1200px; margin: 3rem auto 0; padding-top: 3rem; border-top: 1px solid var(--border); }
+    .deuda-photo-credit { display: inline-block; margin-top: 0.7rem; color: var(--gold); font-size: 0.75rem; line-height: 1.5; }
+
+    .wildlife-banner { position: relative; background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/03/Surma_Sarobar%2C_Bajhang_03.jpg'); background-size: cover; background-position: center; padding: 6rem 2rem; text-align: center; }
+    .wildlife-overlay { position: absolute; inset: 0; background: rgba(13,17,23,0.72); }
+    .wl-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+    .wl-content h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #fff; margin-bottom: 1rem; }
+    .wl-content p { color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 2rem; }
+    .wl-badges { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; }
+    .wl-badge { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: 99px; padding: 0.5rem 1.2rem; font-size: 0.85rem; color: rgba(255,255,255,0.85); backdrop-filter: blur(8px); }
+
+    .food-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+    .food-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1.2rem; text-align: center; transition: transform 0.3s; }
+    .food-card:hover { transform: translateY(-4px); }
+    .food-emoji { font-size: 2.5rem; margin-bottom: 0.8rem; }
+    .food-name { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
+    .food-desc { font-size: 0.8rem; color: var(--muted); }
+
+    .tips-wrap { background: var(--dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .tips-inner { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem; }
+    .tips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .plan-grid, .season-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .plan-card, .season-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; }
+    .plan-card h3, .season-card h3 { color: #fff; font-family: 'Playfair Display', serif; margin-bottom: 0.65rem; }
+    .plan-card p, .season-card p, .plan-card li { color: var(--muted); font-size: 0.86rem; line-height: 1.7; }
+    .plan-card ol { padding-left: 1.2rem; }
+    .info-notice { margin-top: 1.5rem; border-left: 3px solid var(--gold); background: var(--card); padding: 1rem 1.2rem; color: var(--muted); font-size: 0.86rem; line-height: 1.7; }
+    .info-notice a { color: var(--gold); }
+    .info-strong { color: var(--text); font-weight: 600; }
+    .tip-card { display: flex; gap: 1rem; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; }
+    .tip-num { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--border); font-weight: 700; flex-shrink: 0; line-height: 1; }
+    .tip-title { font-size: 0.92rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+    .tip-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.65; }
+
+    footer { background: var(--dark); border-top: 1px solid var(--border); padding: 3rem 2rem; text-align: center; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--gold); margin-bottom: 0.5rem; }
+    .footer-tagline { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .footer-links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 0.75rem; color: rgba(139,148,158,0.5); }
+    .footer-attrib { font-size: 0.68rem; color: rgba(139,148,158,0.35); margin-top: 0.5rem; }
+
+    .lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.93); align-items: center; justify-content: center; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 88vh; border-radius: 8px; object-fit: contain; }
+    .lb-close { position: absolute; top: 1.5rem; right: 1.5rem; background: var(--card); border: 1px solid var(--border); color: var(--text); font-size: 1.1rem; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
+    .lb-close:hover { background: var(--gold); color: #000; }
+
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s, transform 0.7s; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .about-inner, .map-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .g-item.tall { grid-column: span 2; height: 250px; }
+      .video-feature { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+      .fact-grid { grid-template-columns: 1fr; }
+      .deuda-feature { grid-template-columns: 1fr; gap: 2rem; }
+      .language-feature { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="#">&#127956; Bajhang</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#attractions">Attractions</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#planning">Plan</a></li>
+    <li><a href="#stay-guides">Stay &amp; Guides</a></li>
+    <li><a href="#culture">Culture</a></li>
+    <li><a href="#languages">Languages</a></li>
+    <li><a href="#best-time">Best Time</a></li>
+    <li><a href="#responsible">Travel Responsibly</a></li>
+  </ul>
+</nav>
+
+<!-- HERO — Real photo background: Surma Kunda, Bajhang -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Sudurpashchim Province, Nepal</div>
+    <h1>Explore<br/><span>Bajhang</span></h1>
+    <p class="hero-sub">The City of Kings — a hidden Himalayan paradise of sacred lakes, towering peaks, ancient temples, and vibrant culture in Nepal's Far West.</p>
+    <div class="hero-btns">
+      <a href="#attractions" class="btn btn-gold">Discover Places</a>
+      <a href="#location" class="btn btn-outline">&#128205; View on Map</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">7,031m</div><div class="stat-label">Mt. Saipal Height</div></div>
+    <div class="stat"><div class="stat-num">3,422</div><div class="stat-label">km&#178; Area</div></div>
+    <div class="stat"><div class="stat-num">250+</div><div class="stat-label">Bird Species</div></div>
+    <div class="stat"><div class="stat-num">1,000+</div><div class="stat-label">Years of History</div></div>
+  </div>
+</div>
+
+<!-- ABOUT — Real photo: Chainpur Bazaar by Awasman, CC-BY-SA -->
+<div class="about-strip" id="about">
+  <div class="about-inner">
+    <div class="about-image reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/16-09-01_164250_Nepal_Bajhang_Looking_E_Over_Chainpur_Bazaar.jpg" alt="Chainpur Bazaar and the Seti River in Bajhang" loading="lazy" />
+      <div class="about-badge">&#128248; Chainpur Bazaar (Real Photo)</div>
+    </div>
+    <div class="about-text reveal">
+      <div class="section-label">About the District</div>
+      <h2 class="section-title">The City of Kings</h2>
+      <p>Bajhang is a remote, breathtaking district in Nepal's Sudurpashchim Province — known as one of the ancient <em>Chaubisi Rajya</em> (24 principalities). Nestled in the Far Western Himalayas, it blends deep spiritual traditions with rugged, untouched landscapes.</p>
+      <p>From the soaring peak of <strong>Mt. Saipal</strong> to the sacred <strong>Surma Sarovar</strong> lake and the cultural hub of <strong>Chainpur</strong>, Bajhang remains one of Nepal's most authentic and undiscovered destinations.</p>
+      <div class="fact-grid">
+        <div class="fact-box"><div class="fact-title">Province</div><div class="fact-val">Sudurpashchim Pradesh</div></div>
+        <div class="fact-box"><div class="fact-title">Headquarters</div><div class="fact-val">Chainpur</div></div>
+        <div class="fact-box"><div class="fact-title">Best Season</div><div class="fact-val">Oct–Nov &amp; Mar–May</div></div>
+        <div class="fact-box"><div class="fact-title">Gateway</div><div class="fact-val">Dhangadhi Airport</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ATTRACTIONS -->
+<section id="attractions">
+  <div class="section-header reveal">
+    <div class="section-label">Top Destinations</div>
+    <h2 class="section-title">Must-Visit Attractions</h2>
+    <p class="section-desc">Sacred lakes, Himalayan peaks, ancient royal towns, and protected wilderness — Bajhang offers extraordinary experiences for every kind of traveller.</p>
+  </div>
+  <div class="attract-grid">
+
+    <div class="card reveal">
+      <div class="card-img-wrap">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Mt_Saipal.png" alt="Mount Saipal — 7,031 metres" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <span class="card-tag">&#9968; Trekking</span>
+        <div class="card-title">Mount Saipal (7,031m)</div>
+        <div class="card-desc">The second-highest peak in the Far Western Himalayas. Its trekking routes pass the historic Urai Bhanjyang pass — a gateway to Mount Kailash in Tibet — offering breathtaking remote Himalayan scenery.</div>
+        <div class="card-meta"><span>&#128205; Northern Bajhang</span><span>&#129495; Advanced Trek</span></div>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-img-wrap">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Mountain_ranges_khaptad_national_park.jpg" alt="Mountain ranges seen from Bajhang, regional photo for Durgathali" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <span class="card-tag">&#127807; Meadow &amp; Viewpoint</span>
+        <div class="card-title">Durgathali Meadow</div>
+        <div class="card-desc">A highland meadow and viewpoint in Bajhang, known for open Himalayan views and seasonal wildflowers. This is a regional Bajhang mountain photograph, not a verified photograph of the Durgathali site.</div>
+        <div class="card-meta"><span>&#128205; Bajhang</span><span>Regional photo · Joyboy420</span></div>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-img-wrap">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/0/03/Surma_Sarobar%2C_Bajhang_03.jpg" alt="Surma Sarovar Lake in Bajhang" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <span class="card-tag">&#128591; Pilgrimage</span>
+        <div class="card-title">Surma Sarovar Lake</div>
+        <div class="card-desc">A sacred high-altitude lake believed to have healing properties. Every July, thousands of pilgrims gather for the holy <em>Birijaat</em> festival, bathing in its waters believed to cure skin ailments.</div>
+        <div class="card-meta"><span>&#128205; Surma Municipality</span><span>&#127754; Glacial Lake</span></div>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-img-wrap">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Surma_Kunda%2C_Bajhang_01.jpg" alt="Surma Kunda in Bajhang" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <span class="card-tag">&#127807; Nature</span>
+        <div class="card-title">Surma Kunda Valley</div>
+        <div class="card-desc">The pristine Surma Valley features dramatic mountain scenery, glacier-fed streams, and trails through Nepal's least-visited wilderness. A paradise for those seeking solitude and raw Himalayan beauty.</div>
+        <div class="card-meta"><span>&#128205; Surma Valley</span><span>&#127968; Wild Landscape</span></div>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-img-wrap">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/16-09-01_164250_Nepal_Bajhang_Looking_E_Over_Chainpur_Bazaar.jpg" alt="Chainpur Bazaar in Bajhang" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <span class="card-tag">&#127963; Heritage</span>
+        <div class="card-title">Chainpur — City of Kings</div>
+        <div class="card-desc">The historic district headquarters features ruins of ancient palaces and forts. Its vibrant bazaar is a cultural hub with authentic local life, traditional crafts, and centuries of royal Bajhangi history.</div>
+        <div class="card-meta"><span>&#128205; Central Bajhang</span><span>&#127963; Historic Town</span></div>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-img-wrap">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Khaptad_National_Park%2C_Nepal.jpg" alt="Khaptad National Park, Nepal" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <span class="card-tag">&#129409; Wildlife</span>
+        <div class="card-title">Khaptad National Park</div>
+        <div class="card-desc">A "biodiversity jackpot" — Khaptad features lush forests, sprawling alpine meadows, and is home to snow leopards, black bears, and over 250 species of birds. Key highlights: Khaptad Lake &amp; Trishul Peak views.</div>
+        <div class="card-meta"><span>&#128205; Southwest Bajhang</span><span>&#128060; Protected Zone</span></div>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-img-wrap">
+        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/1/13/Bajhang.jpg" alt="Bajhang district landscape; regional image, not a temple photograph" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <span class="card-tag">&#9961; Sacred Sites</span>
+        <div class="card-title">Bannimasta &amp; Kalika Temples</div>
+        <div class="card-desc">Bajhang is dotted with revered temples: <strong>Bannimasta Temple</strong>, <strong>Kalika Devi Mandir</strong>, <strong>Surma Devi Mandir</strong>, and <strong>Devisthan Temple</strong> — each deeply embedded in local tradition.</div>
+        <div class="card-meta"><span>&#128205; Across Bajhang</span><span>Regional landscape; temple-specific photo unavailable</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY — All REAL photos from Wikimedia Commons -->
+<div class="gallery-wrap" id="gallery">
+  <div class="gallery-inner">
+    <div class="section-header reveal">
+      <div class="section-label">Photo Gallery</div>
+      <h2 class="section-title">Real Photos of Bajhang</h2>
+      <p class="section-desc">Photographs are sourced from Wikimedia Commons. Site-specific photos are used when verified; district-level scenes are labeled as regional images. Click any photo to enlarge.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item tall" onclick="openLB(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Surma_Kunda%2C_Bajhang_01.jpg" alt="Surma Kunda, Bajhang" loading="lazy" />
+        <div class="g-cap"><p>&#127754; Surma Kunda — Sacred Valley, Bajhang District (Real Photo)</p></div>
+      </div>
+      <div class="g-item" onclick="openLB(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Surma_Sarobar%2C_Bajhang_03.jpg" alt="Surma Sarovar Lake, Bajhang" loading="lazy" />
+        <div class="g-cap"><p>&#128591; Surma Sarovar Pilgrimage Lake (Real Photo)</p></div>
+      </div>
+      <div class="g-item" onclick="openLB(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Mt_Saipal.png" alt="Mount Saipal, 7,031 metres" loading="lazy" />
+        <div class="g-cap"><p>&#9968; Mount Saipal 7,031m (Real Photo)</p></div>
+      </div>
+      <div class="g-item" onclick="openLB(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/16-09-01_164250_Nepal_Bajhang_Looking_E_Over_Chainpur_Bazaar.jpg" alt="Chainpur Bazaar and the Seti River, Bajhang" loading="lazy" />
+        <div class="g-cap"><p>&#127963; Chainpur Bazaar, Bajhang (Real Photo by Awasman)</p></div>
+      </div>
+      <div class="g-item" onclick="openLB(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Bajhang.jpg" alt="Bajhang District Overview — Real Photo" loading="lazy" />
+        <div class="g-cap"><p>&#128506; Bajhang District (Real Photo)</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VIDEOS -->
+<div class="video-wrap" id="videos">
+  <div class="video-inner">
+    <div class="section-header reveal">
+      <div class="section-label">Watch &amp; discover</div>
+      <h2 class="section-title">Bajhang in Motion</h2>
+      <p class="section-desc">A short cultural feature introducing Deuda, a song-and-dance tradition of Nepal's Far West.</p>
+    </div>
+    <div class="video-feature">
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/QzCva4ON6iQ"
+          title="Deuda song and dance by Khaptad Digital Music"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="video-copy reveal">
+        <span class="card-tag">Culture · Deuda</span>
+        <h3 class="section-title">A circle of song</h3>
+        <p>This performance features the Deuda song “Ui Juni Bhet Hoijau,” published by Khaptad Digital Music. Deuda is associated with Sudurpashchim and is performed at festivals and community gatherings.</p>
+        <p>This is a Far-Western cultural recording, not a claim that the video was filmed in Bajhang.</p>
+        <a class="btn btn-outline" href="https://www.youtube.com/watch?v=QzCva4ON6iQ" target="_blank" rel="noreferrer">Watch on YouTube</a>
+        <br />
+        <a class="video-source" href="https://commons.wikimedia.org/wiki/File:Deuda_dance.jpg" target="_blank" rel="noreferrer">Video reference: Khaptad Digital Music · Commons record · CC BY-SA 3.0</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAP -->
+<div class="map-wrap" id="location">
+  <div class="map-inner">
+    <div class="section-header reveal">
+      <div class="section-label">Location &amp; GPS</div>
+      <h2 class="section-title">Find Bajhang on the Map</h2>
+      <p class="section-desc">Bajhang is in Nepal's Far Western region. Coordinates: 29.55°N, 81.20°E. Access via Dhangadhi Airport then Jaya Prithivi Highway.</p>
+    </div>
+    <div class="map-grid">
+      <div class="reveal">
+        <div class="section-label" style="margin-bottom:1rem;">Key Locations</div>
+        <div class="loc-list">
+          <div class="loc-item">
+            <div class="loc-icon">&#9968;</div>
+            <div><div class="loc-name">Mount Saipal</div><div class="loc-coords">30.1464°N, 81.3681°E</div></div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">&#127754;</div>
+            <div><div class="loc-name">Surma Sarovar Lake</div><div class="loc-coords">29.90°N, 81.10°E</div></div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">&#127963;</div>
+            <div><div class="loc-name">Chainpur Bazaar</div><div class="loc-coords">29.5519°N, 81.1866°E</div></div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">&#127807;</div>
+            <div><div class="loc-name">Khaptad National Park</div><div class="loc-coords">29.35°N, 81.17°E</div></div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">&#9992;</div>
+            <div><div class="loc-name">Dhangadhi Airport (Nearest)</div><div class="loc-coords">28.7533°N, 80.5819°E</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="map-frame reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d453619.98!2d81.0!3d29.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a1a4fbf8a59ddb%3A0xcf2ee2ddde695131!2sBajhang%20District!5e1!3m2!1sen!2snp!4v1696164000000!5m2!1sen!2snp"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bajhang District on Google Maps"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GETTING THERE AND ITINERARIES -->
+<section id="planning">
+  <div class="section-header reveal">
+    <div class="section-label">Plan your visit</div>
+    <h2 class="section-title">How to Reach Bajhang</h2>
+    <p class="section-desc">Chainpur is the district headquarters. The last leg is by road through remote hill country; confirm connections and road conditions before setting out.</p>
+  </div>
+  <div class="plan-grid">
+    <article class="plan-card reveal">
+      <h3>Fly, then travel by road</h3>
+      <p>Fly to Dhangadhi when a suitable service is operating, then arrange a local bus or shared/private jeep toward Chainpur. A Nepalgunj arrival may require an onward connection toward Surkhet before continuing overland.</p>
+      <p><span class="info-strong">Time:</span> Allow a full day for the Dhangadhi-to-Chainpur road leg. Actual time varies with stops, weather, and road condition.</p>
+    </article>
+    <article class="plan-card reveal">
+      <h3>Travel by road</h3>
+      <p>Long-distance buses and local vehicles serve routes in the Far West, but departure points and schedules can change. Ask the operator whether the service reaches Chainpur or requires a transfer.</p>
+      <p><span class="info-strong">Before leaving:</span> Confirm the next departure, road status, luggage limits, and where you will change vehicles.</p>
+    </article>
+    <article class="plan-card reveal">
+      <h3>Getting around locally</h3>
+      <p>For trailheads and remote villages, arrange transport and a local guide in Chainpur or the nearest municipality. Do not assume a road is passable year-round, especially during monsoon.</p>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Chainpur%2C+Bajhang%2C+Nepal" target="_blank" rel="noreferrer">Open Chainpur in Google Maps</a></p>
+    </article>
+  </div>
+  <div class="section-header reveal" style="margin-top:4rem;">
+    <div class="section-label">Sample itineraries</div>
+    <h2 class="section-title">Choose Your Trip Length</h2>
+    <p class="section-desc">These are planning outlines, not guaranteed transfer schedules. Ask a local guide to confirm travel times and trail access before booking.</p>
+  </div>
+  <div class="plan-grid">
+    <article class="plan-card reveal">
+      <h3>2 Days · Chainpur &amp; nearby hills</h3>
+      <ol><li>Explore Chainpur Bazaar, local heritage, and the Seti River viewpoint.</li><li>Visit Durgathali if road access, weather, and a local guide confirm a safe day trip.</li></ol>
+    </article>
+    <article class="plan-card reveal">
+      <h3>3 Days · Heritage &amp; village life</h3>
+      <ol><li>Arrive in Chainpur, rest, and explore the bazaar.</li><li>Take a locally arranged walk to Durgathali or a nearby village.</li><li>Spend time with a host or guide, then return with a travel buffer.</li></ol>
+    </article>
+    <article class="plan-card reveal">
+      <h3>5 Days · Surma highlands</h3>
+      <ol><li>Arrive in Chainpur and acclimatize.</li><li>Travel toward Surma with a local guide.</li><li>Keep a flexible day for weather, rest, or nearby village visits.</li><li>Attempt Surma Sarovar only with appropriate acclimatization and current local advice.</li><li>Return toward Chainpur; keep this day flexible for road or trail delays.</li></ol>
+    </article>
+  </div>
+</section>
+
+<!-- STAYS AND GUIDES -->
+<section id="stay-guides">
+  <div class="section-header reveal">
+    <div class="section-label">Local services</div>
+    <h2 class="section-title">Where to Stay &amp; Find Guides</h2>
+    <p class="section-desc">Use locally run lodging and guides when available. Confirm every booking directly before traveling into remote areas.</p>
+  </div>
+  <div class="plan-grid">
+    <article class="plan-card reveal">
+      <h3>Accommodation</h3>
+      <p>Chainpur and larger settlements are the practical places to ask about rooms, meals, and onward transport. For Surma or high-altitude routes, confirm overnight arrangements before departure; facilities can be limited.</p>
+    </article>
+    <article class="plan-card reveal">
+      <h3>Local guides</h3>
+      <p>Ask a municipality or community tourism contact to connect you with a guide experienced on your exact route, altitude, and season. Agree on itinerary, daily fee, food, and emergency plans in advance.</p>
+    </article>
+  </div>
+  <div class="info-notice reveal"><span class="info-strong">Directory status:</span> We are not publishing accommodation or guide phone numbers until each operator confirms the listing, number, current availability, and rates. The numbers in the draft data have not been verified. Please confirm locally rather than relying on an old listing.</div>
+</section>
+
+<!-- CULTURE -->
+<section id="culture">
+  <div class="section-header reveal">
+    <div class="section-label">Culture &amp; Heritage</div>
+    <h2 class="section-title">Living Traditions of Bajhang</h2>
+    <p class="section-desc">Bajhang's vibrant culture weaves together folk music, dance, ancient rituals, and festivals that have survived unchanged for centuries.</p>
+  </div>
+  <div class="culture-grid">
+    <div class="cult-card reveal"><div class="cult-icon">&#127925;</div><div class="cult-title">Deuda Song &amp; Dance</div><div class="cult-desc">Deuda is a call-and-response folk song and circle dance: dancers join hands, move in a steady rhythm, and take turns singing verses, often in local dialect. In Bajhang it is shared at Gaura and other festivals, fairs, and community gatherings.</div></div>
+    <div class="cult-card reveal"><div class="cult-icon">&#127882;</div><div class="cult-title">Gaura Parva Festival</div><div class="cult-desc">One of the most important festivals in the Far Western region, featuring traditional rituals, singing, and the famous Deuda folk dance celebrating women's devotion.</div></div>
+    <div class="cult-card reveal"><div class="cult-icon">&#128591;</div><div class="cult-title">Birijaat Pilgrimage</div><div class="cult-desc">Every July, thousands of pilgrims trek to Surma Sarovar lake to bathe in its healing waters, believed to cure skin ailments and bring divine blessings.</div></div>
+    <div class="cult-card reveal"><div class="cult-icon">&#127963;</div><div class="cult-title">Chaubisi Kingdom Legacy</div><div class="cult-desc">Bajhang was one of Nepal's historic 24 principalities. Ruins of royal palaces and forts in Chainpur stand as testament to its powerful medieval heritage.</div></div>
+    <div class="cult-card reveal"><div class="cult-icon">&#127807;</div><div class="cult-title">Yarsagumba — Himalayan Gold</div><div class="cult-desc">Bajhang is famous for the rare <em>Yarsagumba</em> (caterpillar fungus) — one of the world's most valuable natural commodities, harvested in high alpine terrain.</div></div>
+    <div class="cult-card reveal"><div class="cult-icon">&#129371;</div><div class="cult-title">Traditional Dairy Culture</div><div class="cult-desc">Celebrated for its exceptionally fresh milk and yogurt from highland cattle. Bajhang's dairy is among the finest found anywhere in Nepal's hill districts.</div></div>
+    <div class="cult-card reveal"><div class="cult-icon">&#128214;</div><div class="cult-title">Bajhangi Speech &amp; Oral Stories</div><div class="cult-desc">Local speech, family histories, folk verses, and place names carry knowledge across generations. Ask residents how they name the places you visit, and record or share their words only with permission and credit.</div></div>
+    <div class="cult-card reveal"><div class="cult-icon">&#129525;</div><div class="cult-title">Crafts &amp; Community Knowledge</div><div class="cult-desc">Learn directly from local makers about weaving, household skills, food, and seasonal work. This page welcomes community-sourced stories and craft details with the contributor's consent and attribution.</div></div>
+  </div>
+  <div class="about-inner deuda-feature">
+    <div class="about-image reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Deuda_Khel.jpg" alt="Performers dancing Deuda, a traditional far-western Nepali song and dance" loading="lazy" />
+      <div class="about-badge">Deuda Khel · Far-Western Nepal</div>
+    </div>
+    <div class="about-text reveal">
+      <div class="section-label">A shared tradition</div>
+      <h3 class="section-title">Why Deuda is played in Bajhang</h3>
+      <p>Deuda brings people together. Dancers form a linked circle, answer one another with sung verses, and move to a common beat. The lyrics can carry local stories, humor, memories, and everyday experience, keeping oral tradition alive across generations.</p>
+      <p>In Bajhang and the wider Sudurpashchim region, Deuda is performed at Gaura and other festivals, fairs, and community celebrations. Joining the dance is a way to celebrate together, express regional identity, and welcome people into the gathering; it is both social participation and entertainment.</p>
+      <a class="deuda-photo-credit" href="https://commons.wikimedia.org/wiki/File:Deuda_Khel.jpg" target="_blank" rel="noreferrer">Photo: Janak Bhatta · CC BY-SA 4.0 · View source</a>
+    </div>
+  </div>
+</section>
+
+<!-- SEASONAL AND PRACTICAL INFORMATION -->
+<section id="best-time">
+  <div class="section-header reveal">
+    <div class="section-label">Weather &amp; preparation</div>
+    <h2 class="section-title">When to Visit &amp; What to Know</h2>
+    <p class="section-desc">Conditions differ between Chainpur and high-altitude trails. Check local forecasts, route access, and festival notices close to your travel date.</p>
+  </div>
+  <div class="season-grid">
+    <article class="season-card reveal"><h3>Spring · March–May</h3><p>Often a good period for clearer days and flowering landscapes. Mountain weather can still change quickly.</p></article>
+    <article class="season-card reveal"><h3>Autumn · October–November</h3><p>Commonly favored for visibility and trekking after the monsoon. Confirm trail and transport conditions locally.</p></article>
+    <article class="season-card reveal"><h3>Monsoon · June–September</h3><p>Rain may cause slippery trails, delays, or landslides. Build in extra time and avoid exposed routes during unsafe conditions.</p></article>
+    <article class="season-card reveal"><h3>Winter · December–February</h3><p>Higher routes can be very cold or snow-covered. Ask locally whether your intended route is open and suitable.</p></article>
+  </div>
+  <div class="tips-grid" style="margin-top:2rem;">
+    <article class="tip-card reveal"><div class="tip-num">01</div><div><div class="tip-title">Permits</div><div class="tip-desc">Check current entry rules and permit requirements with the relevant park or local office before visiting Khaptad National Park. Do not rely on old fee information.</div></div></article>
+    <article class="tip-card reveal"><div class="tip-num">02</div><div><div class="tip-title">Cash &amp; connectivity</div><div class="tip-desc">Carry enough Nepalese rupees for remote travel and keep an offline map. Mobile coverage, charging, and card acceptance may be limited outside larger settlements.</div></div></article>
+    <article class="tip-card reveal"><div class="tip-num">03</div><div><div class="tip-title">Altitude &amp; health</div><div class="tip-desc">Surma Sarovar and other high routes require careful acclimatization. Ascend gradually, travel with an experienced local guide, and descend for worsening altitude symptoms.</div></div></article>
+    <article class="tip-card reveal"><div class="tip-num">04</div><div><div class="tip-title">Emergency help</div><div class="tip-desc">Nepal Police Control: <a href="tel:100">100</a>. Save the current contact for your nearest health facility and local police post before leaving Chainpur; mobile service may not be available on the trail. <a href="https://nepalpolice.gov.np/stations/emergency-contacts/" target="_blank" rel="noreferrer">Official Nepal Police emergency contacts</a>.</div></div></article>
+  </div>
+  <div class="info-notice reveal"><span class="info-strong">Festival calendar:</span> Gaura and Birijaat dates follow local and lunar calendars and change from year to year. Confirm dates with local organizers before planning around a festival.</div>
+</section>
+
+<!-- LANGUAGES -->
+<section id="languages">
+  <div class="section-header reveal">
+    <div class="section-label">Language &amp; identity</div>
+    <h2 class="section-title">Languages of Bajhang</h2>
+    <p class="section-desc">Bajhang is multilingual. The 2021 census recorded several mother tongues across the district.</p>
+  </div>
+  <div class="language-feature reveal">
+    <div class="language-visual" role="img" aria-label="Deuda performers illustrating Bajhang's language and oral culture">
+      <span class="language-visual-label">A voice of Bajhang</span>
+      <div class="language-wordmark" lang="ne">बझाङी</div>
+      <p>Bajhangi · local mother tongue and living identity</p>
+    </div>
+    <div class="language-bars" aria-label="Mother tongue shares reported in the 2021 census">
+      <div class="language-row">
+        <div class="language-row-head"><span>Bajhangi · बझाङी</span><strong>37.63%</strong></div>
+        <div class="language-track" role="progressbar" aria-label="Bajhangi mother tongue share" aria-valuemin="0" aria-valuemax="100" aria-valuenow="37.63"><div class="language-fill" style="width:37.63%"></div></div>
+      </div>
+      <div class="language-row">
+        <div class="language-row-head"><span>Nepali · नेपाली</span><strong>38.17%</strong></div>
+        <div class="language-track" role="progressbar" aria-label="Nepali mother tongue share" aria-valuemin="0" aria-valuemax="100" aria-valuenow="38.17"><div class="language-fill" style="width:38.17%"></div></div>
+      </div>
+      <div class="language-row">
+        <div class="language-row-head"><span>Doteli · डोटेली</span><strong>22.81%</strong></div>
+        <div class="language-track" role="progressbar" aria-label="Doteli mother tongue share" aria-valuemin="0" aria-valuemax="100" aria-valuenow="22.81"><div class="language-fill" style="width:22.81%"></div></div>
+      </div>
+      <div class="language-row">
+        <div class="language-row-head"><span>Other · अन्य</span><strong>1.39%</strong></div>
+        <div class="language-track" role="progressbar" aria-label="Other mother tongue share" aria-valuemin="0" aria-valuemax="100" aria-valuenow="1.39"><div class="language-fill" style="width:1.39%"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="info-notice reveal">
+    These percentages describe reported mother tongues, not everyone who can speak each language. Language use and self-identification can vary between households and communities. Visitors can ask a local host to teach a phrase; ask permission before recording or publishing someone's voice.
+    <br /><a class="language-source" href="https://censusnepal.cbs.gov.np/results/downloads/caste-ethnicity" target="_blank" rel="noreferrer">Source: National Population and Housing Census 2021, mother tongue table</a>
+  </div>
+</section>
+
+<!-- WILDLIFE BANNER — Real photo: Surma Sarobar -->
+<div class="wildlife-banner">
+  <div class="wildlife-overlay"></div>
+  <div class="wl-content reveal">
+    <h2>A Biodiversity Jackpot</h2>
+    <p>Khaptad National Park — stretching across Bajhang — is home to one of Nepal's most diverse ecosystems, sheltering rare and endangered species in pristine alpine wilderness far from civilization.</p>
+    <div class="wl-badges">
+      <span class="wl-badge">&#128060; Snow Leopard</span>
+      <span class="wl-badge">&#128059; Himalayan Black Bear</span>
+      <span class="wl-badge">&#129413; 250+ Bird Species</span>
+      <span class="wl-badge">&#129420; Musk Deer</span>
+      <span class="wl-badge">&#127806; Rare Medicinal Plants</span>
+      <span class="wl-badge">&#129436; Pheasants</span>
+    </div>
+  </div>
+</div>
+
+<!-- FOOD -->
+<section>
+  <div class="section-header reveal">
+    <div class="section-label">Local Cuisine</div>
+    <h2 class="section-title">Taste of Bajhang</h2>
+    <p class="section-desc">Simple, hearty, and deeply connected to the land — Bajhang's cuisine features highland dairy, mountain grains, and wild herbs.</p>
+  </div>
+  <div class="food-grid">
+    <div class="food-card reveal"><div class="food-emoji">&#129373;</div><div class="food-name">Dhindo</div><div class="food-desc">Traditional buckwheat or millet porridge — staple food of Nepal's Far Western hills.</div></div>
+    <div class="food-card reveal"><div class="food-emoji">&#129371;</div><div class="food-name">Fresh Yogurt</div><div class="food-desc">Bajhang is famous for rich, creamy yogurt from highland cattle grazing alpine pastures.</div></div>
+    <div class="food-card reveal"><div class="food-emoji">&#127861;</div><div class="food-name">Butter Tea</div><div class="food-desc">Warming salted tea churned with yak butter — essential fuel for cold mountain days.</div></div>
+    <div class="food-card reveal"><div class="food-emoji">&#127807;</div><div class="food-name">Wild Herbs</div><div class="food-desc">Locally foraged herbs and nettle dishes cooked in traditional Bajhangi style over open fires.</div></div>
+    <div class="food-card reveal"><div class="food-emoji">&#127828;</div><div class="food-name">Roti &amp; Sel</div><div class="food-desc">Deep-fried ring bread made from rice flour — a festive favourite across the whole region.</div></div>
+  </div>
+</section>
+
+<!-- TRAVEL TIPS -->
+<div class="tips-wrap" id="tips">
+  <div class="tips-inner">
+    <div class="section-header reveal">
+      <div class="section-label">Traveller's Guide</div>
+      <h2 class="section-title">Essential Travel Tips</h2>
+      <p class="section-desc">Key information for planning your journey to this remote, extraordinary destination in Nepal's Far West.</p>
+    </div>
+    <div class="tips-grid">
+      <div class="tip-card reveal"><div class="tip-num">01</div><div><div class="tip-title">Best Time to Visit</div><div class="tip-desc">October–November and March–May offer ideal weather. Skies are clear and mountain trails are accessible for trekking.</div></div></div>
+      <div class="tip-card reveal"><div class="tip-num">02</div><div><div class="tip-title">Check transport before departure</div><div class="tip-desc">Road schedules and journey times vary with weather, road works, and transfers. Confirm the current route to Chainpur with the transport operator; allow a full day from Dhangadhi for the road journey.</div></div></div>
+      <div class="tip-card reveal"><div class="tip-num">03</div><div><div class="tip-title">Respect Local Customs</div><div class="tip-desc">Remove shoes before entering homes or temples. Dress modestly in religious sites. Always ask permission before photographing people.</div></div></div>
+      <div class="tip-card reveal"><div class="tip-num">04</div><div><div class="tip-title">Pack for the Altitude</div><div class="tip-desc">Many routes exceed 4,000m. Bring warm layers, rain gear, trekking poles, and altitude sickness medication.</div></div></div>
+      <div class="tip-card reveal"><div class="tip-num">05</div><div><div class="tip-title">Carry identification</div><div class="tip-desc">Carry identification and check current park entry requirements before setting out. Keep copies of important documents separate from the originals.</div></div></div>
+      <div class="tip-card reveal"><div class="tip-num">06</div><div><div class="tip-title">Travel Responsibly</div><div class="tip-desc">Bajhang is pristine and fragile. Pack out your waste, avoid picking plants, and support local guides and homestays.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- RESPONSIBLE TRAVEL -->
+<section id="responsible">
+  <div class="section-header reveal">
+    <div class="section-label">Leave a light footprint</div>
+    <h2 class="section-title">Travel Responsibly</h2>
+    <p class="section-desc">Help protect Bajhang's highland landscapes and make tourism useful to the communities who live here.</p>
+  </div>
+  <div class="tips-grid">
+    <article class="tip-card reveal"><div class="tip-num">01</div><div><div class="tip-title">Pack out your waste</div><div class="tip-desc">Carry rubbish back to a place with proper disposal. Avoid leaving plastic, food packaging, or batteries on trails and near lakes.</div></div></article>
+    <article class="tip-card reveal"><div class="tip-num">02</div><div><div class="tip-title">Respect wildlife</div><div class="tip-desc">Keep distance, stay quiet, never feed wild animals, and follow local park guidance. Leave plants and habitats undisturbed.</div></div></article>
+    <article class="tip-card reveal"><div class="tip-num">03</div><div><div class="tip-title">Ask before taking photos</div><div class="tip-desc">Get permission before photographing people, homes, ceremonies, or sacred places. Follow local customs at temples and festivals.</div></div></article>
+    <article class="tip-card reveal"><div class="tip-num">04</div><div><div class="tip-title">Keep tourism local</div><div class="tip-desc">When available, hire local guides, stay with local hosts, and buy directly from makers. Agree on prices and services clearly before the activity.</div></div></article>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">&#127956; Explore Bajhang</div>
+  <div class="footer-tagline">Nepal's Hidden Himalayan Crown — Far West, Forever Wild</div>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#attractions">Attractions</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#location">Location</a>
+    <a href="#culture">Culture</a>
+    <a href="#tips">Travel Tips</a>
+  </div>
+  <div class="footer-copy">&copy; 2024 Explore Bajhang &mdash; Built with &#10084;&#65039; for Nepal's far western gems.</div>
+  <div class="footer-attrib">Photo credits: Surma Kunda and Surma Sarobar by Cultural beauty of Bajhang; Chainpur Bazaar by Awasman; Mt. Saipal by SimulationWig; Khaptad National Park by Anil Bhatta; Bajhang landscape by Lakshmi 045. Wikimedia Commons, CC BY-SA 4.0.</div>
+  <div class="footer-attrib">Developed by Parash daulyal</div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLB()">
+  <div class="lb-close" onclick="closeLB(event)">&#10005;</div>
+  <img id="lb-img" src="" alt="" onclick="event.stopPropagation()" />
+</div>
+
+<script>
+  function openLB(el) {
+    const img = el.querySelector('img');
+    document.getElementById('lb-img').src = img.src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLB(e) {
+    if (e) e.stopPropagation();
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

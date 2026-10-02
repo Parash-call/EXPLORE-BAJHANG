@@ -1,0 +1,16 @@
+id,festival_name,description,type,location,month,nepali_month,season,attendance,duration_days,tradition
+1,Sera Panchami,"Worship of snake gods at rivers and sacred spots. Devotees fast and offer prayers for prosperity.",religious,Thantibazaar,January,Paush-Magh,Winter,2000,2,Hindu
+2,Makar Sankranti,"Harvest festival celebrating the sun's northward journey. Holy bath in rivers and feasting.",harvest,Bajhang District,January,Magh,Winter,5000,1,Hindu
+3,Ghode Jatra,"Festival of horses with traditional dances, processions, and cultural performances.",cultural,JayaPrithvi,March,Chaitra,Spring,3000,2,Newar-Hindu
+4,Holikhel,"Local variant of Holi festival with color play, folk songs, and traditional dances.",cultural,Bajhang District,March,Phalguna,Spring,4000,1,Hindu
+5,Gaura Festival,"Worship of Goddess Gauri with fasting women, traditional songs, and dances.",religious,Melauli,August,Bhadra,2500,2,Hindu
+6,Gai Jatra,"Cow procession commemorating the departed. Satirical performances and celebrations.",cultural,JayaPrithvi,August,Shrawan,1500,1,Hindu
+7,Janai Purnima,"Sacred thread ceremony. Pilgrims visit Triveni Dham for holy bath.",religious,Triveni Dham,August,Shrawan,3000,1,Hindu
+8,Bala Chaturdashi,"Night-long vigil at temples, scattering of seeds for prosperity.",religious,JayaPrithvi,November,Kartik,Autumn,2000,1,Hindu
+9,Mahasaptami,"Major Navaratri worship with animal offerings and traditional dances.",religious,Badimalika,October,Ashwin,Autumn,3500,1,Hindu
+10,Ubhauli Uplift,"Migration festival marking return to higher pastures. Traditional dances and feasts.",cultural,Surma Valley,May,Baisakh,Spring,1500,2,Maghi-Hindu
+11,Tihar,"Festival of lights with deusi-bhailo, Laxmi puja, and celebrations.",cultural,Bajhang District,November,Kartik,Autumn,6000,5,Hindu
+12,Dashain,"Nepal's biggest festival. Family reunions, tika ceremony, kite flying.",cultural,Bajhang District,October,Aswin,Autumn,8000,10,Hindu
+13,Chaito Mela,"Annual fair at Triveni Dham with trade, cultural shows, and ceremonies.",fair,Triveni Dham,March,Chaitra,Spring,4000,3,Hindu
+14,Ashtami Mela,"Religious fair on eighth day of Navaratri with processions.",fair,Badimalika,October,Ashwin,Autumn,2500,1,Hindu
+15,Khaptad Mahotsav,"Tourism and cultural festival celebrating Khaptad heritage.",tourism,Khaptad NP,November,Kartik,Autumn,1000,3,Multi-cultural

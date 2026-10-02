@@ -1,0 +1,16 @@
+id,route_name,start_point,end_point,distance_km,duration_days,difficulty,elevation_gain,description,best_season,permit_required,rating
+1,Khaptad Trek,Badimalika,Khaptad National Park,28,4,moderate,1200,"Scenic trek through forests and meadows to Khaptad plateau with views of Api and Saipal.",Oct-May,No,4.5
+2,Saipal Base Camp Trek,Darchula,Saipal BC,45,8,hard,2800,"Challenging trek through remote wilderness to the base of Mt. Saipal (7031m).",Oct-Nov,No,4.7
+3,Surma Valley Nature Walk,Thantibazaar,Surma Village,12,2,easy,400,"Gentle walk through terraced farmlands and traditional villages.",Year-round,No,4.2
+4,Durga Thali Hike,Melauli,Durga Thali,8,1,moderate,700,"Day hike to panoramic meadow with Himalayan views.",Sep-May,No,4.6
+5,Api Base Camp Trek,Darchula,Api BC,60,10,very_hard,3500,"Extreme trek to the highest base camp in Far-Western Nepal.",Oct-Nov,No,4.8
+6,Triveni Heritage Walk,JayaPrithvi,Triveni Dham,6,1,easy,200,"Cultural walk visiting temples and sacred confluence.",Year-round,No,4.1
+7,Meshamkhola Bridge Trail,Bainshida,Mesham Bridge,5,0.5,easy,150,"Short trail along river to historic suspension bridge.",Year-round,No,3.9
+8,Pandava Cave Exploration,Melauli,Pandava Cave,10,1,moderate,500,"Explore legendary caves with mythological significance.",Oct-Apr,No,4.3
+9,Melauli Lake Circuit,Melauli,Melauli Lake,15,2,moderate,900,"Circuit trek through alpine meadows to crystal clear lake.",Mar-Oct,No,4.4
+10,Badimalika Cultural Trail,Badimalika,Gyaneshwor Temple,18,3,moderate,600,"Cultural trail connecting temples and traditional settlements.",Year-round,No,4.0
+11,Surkhet Corridor Trek,Thantibazaar,Surkhet Border,70,6,hard,1800,"Long distance trek connecting Bajhang to outer Terai.",Sep-May,No,4.0
+12,Khaptad Baba Pilgrimage,Badimalika,Khaptad Baba Ashram,25,3,moderate,1100,"Pilgrimage route to sacred ashram through national park.",Mar-Nov,No,4.7
+13,Lamabagar Waterfall Trail,Thantibazaar,Waterfall,7,0.5,easy,300,"Short scenic trail to majestic waterfall.",Jun-Sep,No,4.3
+14,Chhinga Cave Trek,Thantibazaar,Chhinga Cave,14,2,moderate,750,"Trek through forests to ancient limestone cave.",Oct-Apr,No,4.0
+15,Satellite Point Sunrise Hike,Badimalika,Satellite Viewpoint,9,1,moderate,650,"Early morning hike for spectacular sunrise views.",Year-round,No,4.5

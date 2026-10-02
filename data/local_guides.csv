@@ -1,0 +1,16 @@
+id,name,phone,expertise,experience_years,language,rating,price_per_day_np,municipality,available,description,certified
+1,Ram Bahadur BK,984-1100001,"Khaptad Trek,Mountain Trekking",12,"Nepali,Bajhangi,Hindi",4.7,1500,Badimalika,Yes,"Senior guide with 12 years in Khaptad region.",Yes
+2,Sita Rawal,984-1100002,"Cultural Tourism,Village Tours",8,"Nepali,Bajhangi,English",4.5,1200,Thantibazaar,Yes,"Specializes in cultural heritage tourism.",Yes
+3,Deepak Chand,984-1100003,"Mountain Trekking,Api/Saipal",15,"Nepali,Bajhangi,Hindi,English",4.8,2000,Darchula,Yes,"Expert high-altitude trekking guide.",Yes
+4,Maya Bohara,984-1100004,"Bird Watching,Nature Walk",6,"Nepali,Bajhangi",4.4,1000,Melauli,Yes,"Nature guide specializing in bird watching.",Yes
+5,Bir Singh Dhami,984-1100005,"Trekking,Mountaineering",10,"Nepali,Bajhangi,Hindi,English",4.6,1800,JayaPrithvi,Yes,"Experienced trekking and mountaineering guide.",Yes
+6,Laxmi BK,984-1100006,"Homestay Tourism,Local Culture",5,"Nepali,Bajhangi",4.3,800,Badimalika,Yes,"Local homestay coordinator and cultural guide.",No
+7,Hari Prasad Joshi,984-1100007,"Religious Tourism,Pilgrimage",9,"Nepali,Bajhangi,Hindi",4.5,1100,JayaPrithvi,Yes,"Expert on religious sites and pilgrimages.",Yes
+8,Kamala Bohara,984-1100008,"Cuisine Tourism,Cooking Classes",4,"Nepali,Bajhangi",4.2,900,Thantibazaar,Yes,"Teaches traditional Far-Western cuisine.",No
+9,Rajendra Rawat,984-1100009,"Adventure Tourism,River Crossing",7,"Nepali,Bajhangi,English",4.4,1400,Bainshida,Yes,"Adventure tourism specialist.",Yes
+10,Anita Bhandari,984-1100010,"Photography Tours,Landscape",3,"Nepali,English",4.1,1000,Melauli,Yes,"Photography-focused landscape tours.",No
+11,Krishna Prasad Upadhyay,984-1100011,"Historical Tours,Architecture",11,"Nepali,Bajhangi,Hindi",4.5,1300,JayaPrithvi,Yes,"Historian guiding heritage tours.",Yes
+12,Sunita Thapa,984-1100012,"Eco-Tourism,Wildlife",6,"Nepali,Bajhangi,English",4.3,1200,Badimalika,Yes,"Eco-tourism and wildlife guide.",Yes
+13,Gopal BK,984-1100013,"Trekking,Logistics",8,"Nepali,Bajhangi",4.2,1500,Darchula,Yes,"Trekking guide with logistics skills.",Yes
+14,Parbati Devi Joshi,984-1100014,"Textile Tours,Weaving",5,"Nepali,Bajhangi",4.0,900,Thantibazaar,Yes,"Showcases traditional weaving heritage.",No
+15,Mohan Chand,984-1100015,"Mountain Guide,High Altitude",14,"Nepali,Bajhangi,Hindi,English",4.7,2200,Darchula,Yes,"High-altitude certified guide.",Yes

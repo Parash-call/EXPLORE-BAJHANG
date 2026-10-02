@@ -1,0 +1,16 @@
+id,name,type,address,municipality,latitude,longitude,price_range_np,rooms,capacity,rating,description,contact,has_wifi,has_hot_water,has_parking,meals_available
+1,Khaptad Guest House,hotel,Badimalika-5,Badimalika,29.4520,80.9850,budget,8,16,4.0,"Government rest house near Khaptad National Park.",984-1234567,Yes,Yes,Yes,Breakfast
+2,Surma Valley Homestay,homestay,Surma Village,Thantibazaar,29.3820,81.0210,budget,4,8,4.3,"Traditional homestay with authentic local food.",984-2345678,No,Yes,No,Full-board
+3,Durga Thali Resort,lodge,Durga Thali Road,Melauli,29.4210,80.9510,mid-range,10,20,4.5,"Mountain resort with panoramic Himalayan views.",984-3456789,Yes,Yes,Yes,Full-board
+4,Badimalika Inn,hotel,Badimalika Bazaar,Badimalika,29.4510,80.9840,mid-range,12,24,4.2,"Comfortable hotel in main bazaar with restaurant.",984-4567890,Yes,Yes,Yes,Full-board
+5,Api Base Camp Lodge,lodge,Darchula Road,Darchula,29.5990,80.9310,budget,6,12,4.1,"Basic lodge serving trekkers heading to Api BC.",984-5678901,No,Yes,Breakfast
+6,JayaPrithvi Hotel,hotel,JayaPrithvi Nagari,JayaPrithvi,29.5010,81.0810,mid-range,15,30,4.4,"District HQ hotel with conference facilities.",984-6789012,Yes,Yes,Yes,Full-board
+7,Satellite View Homestay,homestay,Near Satellite Viewpoint,Badimalika,29.4710,80.9910,budget,3,6,4.6,"Family-run homestay with stunning mountain views.",984-7890123,No,Yes,No,Breakfast
+8,Melauli Lake Resort,lodge,Melauli Lake Road,Melauli,29.4310,80.9610,mid-range,8,16,4.3,"Eco-lodge near Melauli Lake with nature trails.",984-8901234,Yes,Yes,Yes,Full-board
+9,Triveni Dham Dharamshala,dharamshala,Triveni Dham,JayaPrithvi,29.5110,81.0710,budget,20,60,3.8,"Pilgrim rest house near sacred confluence.",984-9012345,No,No,No,Langar
+10,Thantibazaar Community Lodge,community_lodge,Thantibazaar Bazaar,Thantibazaar,29.3810,81.0205,budget,6,12,4.0,"Community-managed lodge supporting local livelihoods.",984-0123456,No,Yes,Yes,Breakfast
+11,Khaptad Baba Ashram Stay,ashram,Khaptad NP,Badimalika,29.4600,80.9900,budget,10,30,4.4,"Spiritual retreat near Khaptad Baba Ashram.",984-1111111,No,No,No,Vegetarian
+12,Bainshida Heritage Home,homestay,Bainshida Village,Bainshida,29.3910,81.0410,budget,5,10,4.2,"Heritage homestay in traditional architecture.",984-2222222,No,Yes,No,Full-board
+13,Saipal Trek Lodge,lodge,Darchula Route,Darchula,29.5810,80.9410,budget,5,10,3.9,"Basic trekking lodge on Saipal BC route.",984-3333333,No,Yes,Breakfast
+14,Khaptad NP Camp,campsite,Khaptad NP Interior,Badimalika,29.4480,80.9860,budget,0,50,4.1,"Camping area within national park.",984-4444444,No,No,Yes,Self-catering
+15,Masta Cave Rest Stop,rest_house,Near Masta Cave,Badimalika,29.4410,81.0110,budget,3,6,3.7,"Small rest house near Masta Cave.",984-5555555,No,No,No,Tea-snacks
